@@ -23,12 +23,4 @@ public class ImageData {
     @Lob
     @Column(name = "imagedata",length = 1000)
     private byte[] imageData;
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
 }
