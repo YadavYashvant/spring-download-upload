@@ -3,13 +3,17 @@ package com.yashvant.springdownloadupload.service;
 import com.yashvant.springdownloadupload.entity.ImageData;
 import com.yashvant.springdownloadupload.repository.StorageRepository;
 import com.yashvant.springdownloadupload.util.ImageUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Optional;
 
+@Service
 public class StorageService {
 
+    @Autowired
     private StorageRepository repository;
 
     public String uploadImage(MultipartFile file) throws IOException {
